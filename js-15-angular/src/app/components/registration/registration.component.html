@@ -1,0 +1,17 @@
+<h1>Регистрация</h1>
+<form #regForm="ngForm" (ngSubmit)="registerUser(regForm)">
+    <div>
+        <input name="email" type="email" placeholder="email" ngModel required email>
+    </div>
+    <div>
+        <input name="password" type="password" placeholder="password" ngModel required>
+    </div>
+    <div>
+        <input name="age" type="number" placeholder="age" ngModel required>
+    </div>
+    <div>
+        <input name="name" type="text" placeholder="name" ngModel required>
+    </div>
+    <div class="error-message" *ngIf="isInvalidAuth">{{errorMessage}}</div>
+    <button type="submit" [disabled]="regForm.invalid || isInvalidAuth">Зарегистрировать</button>
+</form>

@@ -1,0 +1,11 @@
+<h1>Авторизация</h1>
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div>
+        <input name="email" type="email" placeholder="email" ngModel required email>
+    </div>
+    <div>
+        <input name="password" type="password" placeholder="password" ngModel required>
+    </div>
+    <div class="error-message" *ngIf="isInvalidAuth">{{errorMessage}}</div>
+    <button type="submit" [disabled]="loginForm.invalid">Войти</button>
+</form>

@@ -1,0 +1,21 @@
+<main>
+    <div class="todos-container">
+        <h1>Мои задачи</h1>
+        <app-todo *ngFor="let todo of service.todos" [todo]="todo" (deleteEvent)="deleteTodo($event)" (updateEvent)="updateTodo($event)"></app-todo>
+    </div>
+    <div class="add-form-container">
+        <form #addForm="ngForm" (ngSubmit)="createTodo(addForm)">
+            <div>
+                <label>Описание задачи</label><br>
+                <textarea name="description" ngModel required></textarea>
+            </div>
+            <button type="submit" [disabled]="addForm.invalid">Добавить</button>
+        </form>
+    </div>
+</main>
+<div  [ngClass]="{
+                'load-banner': loading,
+                'none': !loading,
+            }">
+    загрузка...
+</div>

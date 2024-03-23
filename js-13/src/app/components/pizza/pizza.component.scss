@@ -1,0 +1,19 @@
+:host{
+    cursor: pointer;
+}
+.container-pizza{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    margin-right: 20px;
+}
+.container-pizza:hover{
+    border-radius: 20px;
+    background-color: #efe8e8;
+}
+
+img{
+    width: 200px; 
+    user-select: none;
+}

@@ -1,0 +1,16 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+button{
+    width: 300px;
+    color: white;
+    background-color: #4c4c4c;
+    border-radius: 20px;
+    font-size: 30px;
+}
+button:hover{
+    background-color: #6e6e6e;
+}

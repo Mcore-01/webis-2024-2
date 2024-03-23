@@ -1,0 +1,48 @@
+:host{
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+
+    align-items: center;
+}
+.container{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template:  0.5fr 1fr / 1fr;
+    place-items: center;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+.title-post h1{
+    color: #5cbdb0;
+    font-family: "Arial Black";
+    text-transform: uppercase;
+}
+
+.body-post h2{
+    color: white;
+    font-family: "Arial Black";
+}
+
+.back-button{
+    color: white;
+}
+
+a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: "Arial Black";
+    font-size: 20px;
+}
+
+.comment-button{
+    margin-top: 30px;
+}
+
+.comment-button:hover{
+    background-color: #2f2f2f;
+}

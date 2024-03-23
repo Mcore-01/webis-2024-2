@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<div class="con-pizzas-calculator">
+    <div class="con-pizzas">
+        <app-pizza *ngFor="let pizza of data" [pizza]="pizza" (click)="changePizza(pizza)"></app-pizza>
+    </div>
+    <!-- *ngIf="isPizzaSelected" -->
+    <div  *ngIf="isPizzaSelected" class="con-calculator">
+        <app-calculator [pizza] = "selectedPizza" ></app-calculator>
+    </div>
+</div>

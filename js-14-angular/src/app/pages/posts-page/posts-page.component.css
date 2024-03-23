@@ -1,0 +1,22 @@
+nav{
+    position: fixed;
+    background-color: #1c1b1b;
+    padding: 20px;
+    height: 100lvh;
+}
+
+h1{
+    color: #cccbcb;
+}
+
+a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: "Arial Black";
+    font-size: 20px;
+}
+
+.container-post{
+    margin-left: 20vw;
+}

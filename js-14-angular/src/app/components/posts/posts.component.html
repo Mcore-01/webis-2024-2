@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="title-post">
+        <h1>
+            {{post?.title}}
+        </h1>
+    </div>
+    <div class="body-post">
+        <h2>
+            {{post?.body}}
+        </h2>
+    </div>
+</div>
+<div class="comment-button" (click)="openComments()">
+    <a routerLink="comments">Comments</a>
+</div>
+<router-outlet></router-outlet>

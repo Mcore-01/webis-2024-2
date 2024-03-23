@@ -1,0 +1,12 @@
+<div class="todo-container">
+    <div>
+        <h2>Описание задачи:</h2>
+        <h2>{{todo.description}}</h2>
+    </div>
+    <div>
+        <h2>{{getStatus()}}</h2>
+    </div>
+    <button (click)="deleteTodo()">Удалить</button>
+    <label>Завершить</label>
+    <input type="checkbox" (click)="stateCheckbox($event)" [checked]="todo.completed">
+</div>

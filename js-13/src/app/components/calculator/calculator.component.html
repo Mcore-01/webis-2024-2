@@ -1,0 +1,28 @@
+<div class="title-calculator">
+    <h1>Выберите размер: </h1>
+    <abbr title="В зависимости от размера меняется цена и кол-во калорий"><img src="../../../assets/icons/i.png" alt=""></abbr>
+</div>
+<div class="con-switcher" (click)="changePizzaSize()">
+    <div class="pizza-size-switcher" >
+        <div class="mini-button" 
+            [ngClass]="{
+                'background-white': !isBigPizzaSelected,
+                'background-default': isBigPizzaSelected,
+            }"
+        >
+            Маленькая</div>
+        <div class="big-button"
+            [ngClass]="{
+                'background-white': isBigPizzaSelected,
+                'background-default': !isBigPizzaSelected,
+            }"
+        >
+            Большая</div>
+    </div>
+</div>
+<h1>Добавить по вкусу:</h1>
+<div class="con-toppings">
+    <app-topping *ngFor="let topping of toppings" [topping]="topping" [size]="isBigPizzaSelected" (click)="addTopping(topping)"></app-topping>
+</div>
+
+<button class="bucket-button">Добавить в корзину за<br>{{pizza.calculatePrice()}}&#8381; ({{pizza.calculateCalories()}}) кКал</button>
